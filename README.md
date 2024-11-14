@@ -3,10 +3,10 @@ This project is a comprehensive analysis of an Amazon sales data report extracte
 
 ## Project Structure
 The project is structured into modular components for improved readability and maintenance:
-data/: Contains the csv file used in this project Amazon Sale Report. Actual file not included due to large size.
-scripts/: Includes Python scripts for data cleaning and analysis.
-visualizations/: Contains saved images of key charts and plots for quick reference.
-dashboard/: Files and configurations for an interactive dashboard built with Django and Plotly.
+- data: Contains the csv file used in this project Amazon Sale Report. Actual file not included due to large size.
+- scripts: Includes Python scripts for data cleaning and analysis.
+- visualizations: Contains saved images of key charts and plots for quick reference.
+- dashboard: Files and configurations for an interactive dashboard built with Django and Plotly.
 
 ## Key Insights
 The following insights were derived from the data:
@@ -35,7 +35,7 @@ Analyzing customer geography reveals which states generated the most revenue, gu
 This bar chart displays the total sales for each product category, highlighting top revenue-generating segments.
 
 ## Technologies Used
-Python: Data analysis and visualization.
-Pandas: Data manipulation.
-Matplotlib & Plotly: Visualization.
-Django: Dashboard development.
+- Python: Data analysis and visualization.
+- Pandas: Data manipulation.
+- Matplotlib & Plotly: Visualization.
+- Django: Dashboard development.
