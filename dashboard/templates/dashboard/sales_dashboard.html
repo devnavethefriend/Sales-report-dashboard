@@ -1,0 +1,51 @@
+<!-- dashboard/templates/dashboard/sales_dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Sales Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { font-size: 2em; }
+        .summary { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Amazon Sales Dashboard</h1>
+    <div class="summary">
+        <p><strong>Total Sales:</strong> {{ total_sales }}</p>
+        <p><strong>Total Orders:</strong> {{ total_orders }}</p>
+        <p><strong>Average Quantity per Order:</strong> {{ average_quantity_per_order }}</p>
+    </div>
+
+    <h3>Order Status Distribution</h3>
+    <p>{{ order_status_summary }}</p>
+    <ul>
+        {% for status, count in order_status.items %}
+            <li><strong>{{ status }}:</strong> {{ count }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Sales by Fulfillment Type</h3>
+    <ul>
+        {% for fulfillment, sales in fulfillment_sales.items %}
+            <li><strong>{{ fulfillment }}:</strong> ₹{{ sales|floatformat:2 }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Top 5 Shipping States</h3>
+    <ul>
+        {% for state, count in top_states.items %}
+            <li><strong>{{ state }}:</strong> {{ count }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Sales by Category</h3>
+    <div>{{ category_sales_fig|safe }}</div>
+
+    <h3>Monthly Sales Trend</h3>
+    <div>{{ monthly_sales_fig|safe }}</div>
+</body>
+</html>

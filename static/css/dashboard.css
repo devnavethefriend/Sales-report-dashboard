@@ -1,0 +1,45 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.dashboard-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-size: 1.2em;
+    color: #2980b9;
+}
+
+.chart-container {
+    margin: 20px 0;
+}
+
+.summary-text {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+.number-highlight {
+    color: #27ae60;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
